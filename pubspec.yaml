@@ -1,0 +1,10 @@
+name: GuoCe
+description: ''
+dependencies:
+  browser: any
+  sass: any
+  # polymer: any
+  fishbone:
+    path: /Users/nami/workspace/fishbone
+transformers:
+  - sass
