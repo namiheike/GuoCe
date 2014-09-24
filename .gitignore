@@ -16,4 +16,4 @@ pubspec.lock
 node_modules/
 
 # compiled jade templates
-web/scripts/views/**.js
+web/scripts/views/**/*.js
