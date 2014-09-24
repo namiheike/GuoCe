@@ -11,3 +11,9 @@ packages/
 
 # Include when developing application packages.
 pubspec.lock
+
+# node modules
+node_modules/
+
+# compiled jade templates
+web/scripts/views/**.js

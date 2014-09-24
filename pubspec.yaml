@@ -1,10 +1,13 @@
 name: GuoCe
 description: ''
 dependencies:
+  # dake: any
   browser: any
   sass: any
   # polymer: any
+  # fishbone: any
   fishbone:
     path: /Users/nami/workspace/fishbone
 transformers:
   - sass
+  - fishbone

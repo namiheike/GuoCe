@@ -7,8 +7,6 @@ import 'controllers/manifest.dart';
 class MainApplication extends fishbone.Application{
   html.Element container;
 
-  String title = 'GuoCe';
-
   var controllers = {
     'main' : mainController
   };
