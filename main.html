@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>GuoCe</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+  <link rel="import" href="components/app/guoce-app.html">
+
+  <script>
+    // TODO figure out how to use this serviceWorker thing
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register("service_worker.js")
+    }
+  </script>
+
+</head>
+<body fullbleed vertical layout>
+
+  <guoce-app fit flex fullbleed vertical layout></guoce-app>
+
+</body>
+</html>

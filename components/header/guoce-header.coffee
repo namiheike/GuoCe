@@ -1,0 +1,2 @@
+Polymer 'guoce-header',
+  ready: =>

@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+
+<link rel="import" href="../header/guoce-header.html">
+<link rel="import" href="../world-map/guoce-world-map.html">
+
+<polymer-element name="guoce-app">
+
+  <template>
+    <core-header-panel flex>
+
+      <guoce-header></guoce-header>
+
+      <core-animated-pages
+      selected="{{selected}}"
+      flex
+      transitions="cross-fade"
+      on-core-animated-pages-transition-end="{{transition_end_action}}"
+      >
+        <div name="splash">
+          splash
+        </div>
+
+        <guoce-world-map id="world-map" name="world-map"></guoce-world-map>
+
+      </core-animated-pages>
+
+    </core-header-panel>
+
+    <link rel="stylesheet" href="./guoce-app.css">
+  </template>
+
+  <script src="./guoce-app.js"></script>
+
+</polymer-element>
