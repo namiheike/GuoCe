@@ -4,25 +4,26 @@
 <link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
 
 <link rel="import" href="../header/guoce-header.html">
+<link rel="import" href="../init-page/guoce-init-page.html">
 <link rel="import" href="../world-map/guoce-world-map.html">
 
-<polymer-element name="guoce-app">
+<polymer-element name="guoce-app" flex vertical layout>
 
   <template>
     <core-header-panel flex>
-
       <guoce-header></guoce-header>
 
       <core-animated-pages
       selected="{{selected}}"
-      flex
+      vertical layout flex
       transitions="cross-fade"
       on-core-animated-pages-transition-end="{{transition_end_action}}"
       >
-        <div name="splash">
-          splash
+        <div name="splash" cross-fade-all>
+          <span>splash</span>
         </div>
 
+        <guoce-init-page id="init-page" name="init-page"></guoce-init-page>
         <guoce-world-map id="world-map" name="world-map"></guoce-world-map>
 
       </core-animated-pages>

@@ -4,7 +4,7 @@ Polymer 'guoce-app',
   ready: =>
     self = ` this `
     self.job 'job1', ->
-      @selected = 'world-map'
+      @selected = 'init-page'
     , 1000
 
   transition_end_action: =>

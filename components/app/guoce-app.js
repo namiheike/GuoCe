@@ -6,7 +6,7 @@
         var self;
         self =  this ;
         return self.job('job1', function() {
-          return this.selected = 'world-map';
+          return this.selected = 'init-page';
         }, 1000);
       };
     })(this),
