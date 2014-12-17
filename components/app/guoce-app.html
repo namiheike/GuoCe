@@ -1,7 +1,10 @@
+<link rel="import" href="../../bower_components/core-signals/core-signals.html">
 <link rel="import" href="../../bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
-<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../globals/guoce-globals.html">
 
 <link rel="import" href="../header/guoce-header.html">
 <link rel="import" href="../init-page/guoce-init-page.html">
@@ -10,24 +13,32 @@
 <polymer-element name="guoce-app" flex vertical layout>
 
   <template>
+    <guoce-globals id="globals"></guoce-globals>
+    <core-signals on-core-signal-app-switch-current-page="{{ switch_current_page }}"></core-signals>
+
     <core-header-panel flex>
       <guoce-header></guoce-header>
 
       <core-animated-pages
-      selected="{{selected}}"
-      vertical layout flex
-      transitions="cross-fade"
-      on-core-animated-pages-transition-end="{{transition_end_action}}"
+        selected="{{selected}}"
+        transitions="cross-fade-all"
+        on-core-animated-pages-transition-end="{{transition_end_action}}"
       >
-        <div name="splash" cross-fade-all>
-          <span>splash</span>
-        </div>
+        <section name="splash">
+          <div cross-fade>
+            <span>splash</span>
+          </div>
+        </section>
 
-        <guoce-init-page id="init-page" name="init-page"></guoce-init-page>
-        <guoce-world-map id="world-map" name="world-map"></guoce-world-map>
+        <section name="init-page">
+          <guoce-init-page cross-fade></guoce-init-page>
+        </section>
+
+        <section name="world-map">
+          <guoce-world-map cross-fade></guoce-world-map>
+        </section>
 
       </core-animated-pages>
-
     </core-header-panel>
 
     <link rel="stylesheet" href="./guoce-app.css">

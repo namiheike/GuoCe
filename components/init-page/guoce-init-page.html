@@ -1,13 +1,15 @@
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
+<link rel="import" href="../globals/guoce-globals.html">
+
 <polymer-element name="guoce-init-page" flex>
   <template>
+    <guoce-globals id="globals"></guoce-globals>
 
     <div class="bg" fit cross-fade></div>
 
-    <div class="main" vertical layout center>
-      <paper-button>button1</paper-button>
-      <paper-button>button1</paper-button>
+    <div class="menu" vertical layout center>
+      <paper-button on-click="{{switch_to_world_map}}">go to world map</paper-button>
     </div>
     <link rel="stylesheet" href="./guoce-init-page.css">
   </template>
