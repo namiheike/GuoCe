@@ -3,7 +3,7 @@
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
       coffee: {
-        coffee_to_js: {
+        compile: {
           options: {
             bare: false,
             sourceMap: true
@@ -15,10 +15,28 @@
           dest: '',
           ext: '.js'
         }
+      },
+      haml: {
+        compile: {
+          options: {
+            bundleExec: true,
+            style: 'expanded'
+          },
+          files: [
+            {
+              expand: true,
+              cwd: '',
+              src: ['**/*.haml'],
+              dest: '',
+              ext: '.html'
+            }
+          ]
+        }
       }
     });
     grunt.loadNpmTasks('grunt-contrib-coffee');
-    return grunt.registerTask('compile', ['coffee']);
+    grunt.loadNpmTasks('grunt-haml2html');
+    return grunt.registerTask('default', ['coffee', 'haml']);
   };
 
 }).call(this);
