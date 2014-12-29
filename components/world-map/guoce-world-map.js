@@ -6,3 +6,5 @@
   });
 
 }).call(this);
+
+//# sourceMappingURL=guoce-world-map.js.map

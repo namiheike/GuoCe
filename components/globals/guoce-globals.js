@@ -21,3 +21,5 @@
   });
 
 }).call(this);
+
+//# sourceMappingURL=guoce-globals.js.map

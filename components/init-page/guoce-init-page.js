@@ -10,3 +10,5 @@
   });
 
 }).call(this);
+
+//# sourceMappingURL=guoce-init-page.js.map

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "guoce-world-map.js",
+  "sourceRoot": "",
+  "sources": [
+    "guoce-world-map.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAA,CAAQ,iBAAR,EACE;AAAA,IAAA,KAAA,EAAO,CAAA,SAAA,KAAA,GAAA;aAAA,SAAA,GAAA,EAAA;IAAA,CAAA,CAAA,CAAA,IAAA,CAAP;GADF,CAAA,CAAA;AAAA"
+}

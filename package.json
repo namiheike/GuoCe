@@ -1,0 +1,8 @@
+{
+  "name": "GuoCe",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-coffee": "^0.12.0"
+  }
+}
