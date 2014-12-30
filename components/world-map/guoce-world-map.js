@@ -1,20 +1,28 @@
 (function() {
   Polymer('guoce-world-map', {
     domReady: function() {
-      var main_canvas, path, start;
+      var circle1, main_canvas;
       main_canvas = this.$.mainCanvas;
       paper.setup(main_canvas);
-      path = new paper.Path();
-      start = new paper.Point(100, 100);
-      path.strokeColor = 'black';
-      path.moveTo(start);
-      path.lineTo(start.add([200, -50]));
-      paper.view.onFrame = (function(_this) {
-        return function(event) {
-          return path.rotate(3);
+      circle1 = new paper.Path.Circle({
+        center: new paper.Point(100, 100),
+        radius: 100,
+        strokeColor: 'black'
+      });
+      circle1.on('mouseenter', (function(_this) {
+        return function(e) {
+          var self;
+          self =  this ;
+          return self.fillColor = 'red';
         };
-      })(this);
-      return paper.view.draw();
+      })(this));
+      return circle1.on('mouseleave', (function(_this) {
+        return function(e) {
+          var self;
+          self =  this ;
+          return self.fillColor = 'white';
+        };
+      })(this));
     }
   });
 

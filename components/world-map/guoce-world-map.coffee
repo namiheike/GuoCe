@@ -7,13 +7,22 @@ Polymer 'guoce-world-map',
 
     paper.setup main_canvas
 
-    path = new paper.Path()
-    start = new paper.Point 100, 100
-    path.strokeColor = 'black';
-    path.moveTo start
-    path.lineTo start.add [ 200, -50 ]
-    
-    paper.view.onFrame = (event) =>
-      path.rotate 3
-    
-    paper.view.draw()
+    circle1 = new paper.Path.Circle
+      center: new paper.Point(100, 100)
+      radius: 100
+      strokeColor: 'black'
+
+    circle1.on 'mouseenter', (e) =>
+      self = ` this `
+      self.fillColor = 'red'
+
+    circle1.on 'mouseleave', (e) =>
+      self = ` this `
+      self.fillColor = 'white'
+
+    circle1.on 'click', (e) =>
+      self = ` this `
+      console.log 'clicked'
+
+    # TODO what's this for
+    # paper.view.draw()
