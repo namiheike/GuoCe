@@ -6,13 +6,15 @@ module.exports = (grunt) ->
         options:
           bare: false
           sourceMap: true
-        expand: true
-        flatten: false
-        cwd: ''
-        src: [ '**/*.coffee' ]
-        dest: ''
-        ext: '.js'
-        # extDot: 'last'
+        files: [
+          expand: true
+          flatten: false
+          cwd: ''
+          src: [ '**/*.coffee' ]
+          dest: ''
+          ext: '.js'
+          extDot: 'last'
+        ]
     # jade:
     #   compile:
     #     options:
@@ -37,7 +39,7 @@ module.exports = (grunt) ->
           src: [ '**/*.haml' ]
           dest: ''
           ext: '.html'
-          # extDot: 'last'
+          extDot: 'last'
         ]
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-haml2html'

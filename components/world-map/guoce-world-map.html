@@ -1,7 +1,9 @@
+<script src='../../bower_components/paper/dist/paper-full.js'></script>
 <polymer-element name='guoce-world-map'>
   <template>
     world-map
+    <canvas id='mainCanvas' resize></canvas>
     <link href='guoce-world-map.css' rel='stylesheet'>
   </template>
-  <script src='guoce-world-map.js'></script>
+  <script canvas='guoce-world-map-canvas' src='guoce-world-map.js'></script>
 </polymer-element>

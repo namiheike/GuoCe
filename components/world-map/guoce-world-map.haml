@@ -1,6 +1,8 @@
+%script{src: '../../bower_components/paper/dist/paper-full.js'}
 %polymer-element{name: 'guoce-world-map'}
   %template
     world-map
+    %canvas#mainCanvas{resize: true}
     %link{rel: 'stylesheet', href: 'guoce-world-map.css'}
 
-  %script{src: 'guoce-world-map.js'}
+  %script{src: 'guoce-world-map.js', canvas: 'guoce-world-map-canvas' }

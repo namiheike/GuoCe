@@ -8,12 +8,17 @@
             bare: false,
             sourceMap: true
           },
-          expand: true,
-          flatten: false,
-          cwd: '',
-          src: ['**/*.coffee'],
-          dest: '',
-          ext: '.js'
+          files: [
+            {
+              expand: true,
+              flatten: false,
+              cwd: '',
+              src: ['**/*.coffee'],
+              dest: '',
+              ext: '.js',
+              extDot: 'last'
+            }
+          ]
         }
       },
       haml: {
@@ -28,7 +33,8 @@
               cwd: '',
               src: ['**/*.haml'],
               dest: '',
-              ext: '.html'
+              ext: '.html',
+              extDot: 'last'
             }
           ]
         }
