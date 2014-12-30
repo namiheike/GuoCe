@@ -1,0 +1,16 @@
+%link{rel: 'import', href: '../../bower_components/paper-button/paper-button.html'}
+%link{rel: 'import', href: '../../components/globals/guoce-globals.html'}
+%link{rel: 'import', href: '../../components/base/guoce-base.html'}
+
+%polymer-element{name: 'guoce-init-page', extends: 'guoce-base'}(flex)
+  %template
+    %guoce-globals{id: 'globals'}
+
+    .bg(fit cross-fade)
+
+    .menu(vertical layout center)
+      %paper-button{'on-click' => '{{switch_to_world_map}}'} go to world map
+
+    %link{rel: 'stylesheet', href: './guoce-init-page.css'}
+
+  %script{src: './guoce-init-page.js'}

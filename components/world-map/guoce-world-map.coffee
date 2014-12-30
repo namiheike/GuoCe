@@ -21,8 +21,7 @@ Polymer 'guoce-world-map',
       self.fillColor = 'white'
 
     circle1.on 'click', (e) =>
-      self = ` this `
-      console.log 'clicked'
+      @switch_current_page 'nation'
 
     # TODO what's this for
     # paper.view.draw()

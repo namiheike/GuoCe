@@ -16,11 +16,16 @@
           return self.fillColor = 'red';
         };
       })(this));
-      return circle1.on('mouseleave', (function(_this) {
+      circle1.on('mouseleave', (function(_this) {
         return function(e) {
           var self;
           self =  this ;
           return self.fillColor = 'white';
+        };
+      })(this));
+      return circle1.on('click', (function(_this) {
+        return function(e) {
+          return _this.switch_current_page('nation');
         };
       })(this));
     }

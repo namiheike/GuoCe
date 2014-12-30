@@ -2,10 +2,7 @@
   Polymer('guoce-init-page', {
     ready: function() {},
     switch_to_world_map: function() {
-      return this.asyncFire('core-signal', {
-        name: 'app-switch-current-page',
-        data: 'world-map'
-      });
+      return this.switch_current_page('world-map');
     }
   });
 
