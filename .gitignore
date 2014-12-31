@@ -7,3 +7,6 @@ bower_components/
 # compiled js
 components/**/*.js
 components/**/*.js.map
+
+# compiled html
+components/**/*.html
