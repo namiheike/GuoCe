@@ -1,0 +1,6 @@
+%link{rel: 'import', href: '../../bower_components/core-localstorage/core-localstorage.html'}
+
+%polymer-element{name: 'guoce-globals', attributes: 'get_values set_values'}
+  %template
+    %core-localstorage#localStorage{name: 'guoce-globals'}
+  %script{src: './guoce-globals.js'}

@@ -1,0 +1,38 @@
+%link{rel: 'import', href: '../../bower_components/core-signals/core-signals.html'}
+%link{rel: 'import', href: '../../bower_components/core-header-panel/core-header-panel.html'}
+%link{rel: 'import', href: '../../bower_components/core-icons/core-icons.html'}
+%link{rel: 'import', href: '../../bower_components/core-animated-pages/core-animated-pages.html'}
+%link{rel: 'import', href: '../../bower_components/paper-icon-button/paper-icon-button.html'}
+
+%link{rel: 'import', href: '../globals/guoce-globals.html'}
+
+%link{rel: 'import', href: '../header/guoce-header.html'}
+%link{rel: 'import', href: '../init-page/guoce-init-page.html'}
+%link{rel: 'import', href: '../world-map/guoce-world-map.html'}
+%link{rel: 'import', href: '../nation/guoce-nation.html'}
+
+%polymer-element{name: 'guoce-app'}(flex vertical layout)
+  %template
+    %link{rel: 'stylesheet', href: './guoce-app.css'}
+
+    %guoce-globals{id: 'globals'}
+    %core-signals{'on-core-signal-app-switch-current-screen' => '{{ switch_current_screen }}'}
+
+    %core-header-panel(flex)
+      %guoce-header
+      %core-animated-pages{ selected: '{{selected}}', transitions: 'cross-fade-all', 'on-core-animated-pages-transition-end' => '{{ transition_end_action }}' }
+
+        %section{name: 'splash'}
+          %div(cross-fade)
+            %span splash
+
+        %section{name: 'init-page'}
+          %guoce-init-page(cross-fade)
+
+        %section{name: 'world-map'}
+          %guoce-world-map(cross-fade)
+
+        %section{name: 'nation'}
+          %guoce-nation#nationScreen(cross-fade)
+
+  %script{src: './guoce-app.js'}

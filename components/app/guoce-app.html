@@ -1,54 +1,37 @@
-<link rel="import" href="../../bower_components/core-signals/core-signals.html">
-<link rel="import" href="../../bower_components/core-header-panel/core-header-panel.html">
-<link rel="import" href="../../bower_components/core-icons/core-icons.html">
-<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
-<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
-
-<link rel="import" href="../globals/guoce-globals.html">
-
-<link rel="import" href="../header/guoce-header.html">
-<link rel="import" href="../init-page/guoce-init-page.html">
-<link rel="import" href="../world-map/guoce-world-map.html">
-<link rel="import" href="../nation/guoce-nation.html">
-
-<polymer-element name="guoce-app" flex vertical layout>
-
+<link href='../../bower_components/core-signals/core-signals.html' rel='import'>
+<link href='../../bower_components/core-header-panel/core-header-panel.html' rel='import'>
+<link href='../../bower_components/core-icons/core-icons.html' rel='import'>
+<link href='../../bower_components/core-animated-pages/core-animated-pages.html' rel='import'>
+<link href='../../bower_components/paper-icon-button/paper-icon-button.html' rel='import'>
+<link href='../globals/guoce-globals.html' rel='import'>
+<link href='../header/guoce-header.html' rel='import'>
+<link href='../init-page/guoce-init-page.html' rel='import'>
+<link href='../world-map/guoce-world-map.html' rel='import'>
+<link href='../nation/guoce-nation.html' rel='import'>
+<polymer-element flex layout name='guoce-app' vertical>
   <template>
-    <guoce-globals id="globals"></guoce-globals>
-    <core-signals on-core-signal-app-switch-current-screen="{{ switch_current_screen }}"></core-signals>
-
+    <link href='./guoce-app.css' rel='stylesheet'>
+    <guoce-globals id='globals'></guoce-globals>
+    <core-signals on-core-signal-app-switch-current-screen='{{ switch_current_screen }}'></core-signals>
     <core-header-panel flex>
       <guoce-header></guoce-header>
-
-      <core-animated-pages
-        selected="{{selected}}"
-        transitions="cross-fade-all"
-        on-core-animated-pages-transition-end="{{transition_end_action}}"
-      >
-        <section name="splash">
+      <core-animated-pages on-core-animated-pages-transition-end='{{ transition_end_action }}' selected='{{selected}}' transitions='cross-fade-all'>
+        <section name='splash'>
           <div cross-fade>
             <span>splash</span>
           </div>
         </section>
-
-        <section name="init-page">
+        <section name='init-page'>
           <guoce-init-page cross-fade></guoce-init-page>
         </section>
-
-        <section name="world-map">
+        <section name='world-map'>
           <guoce-world-map cross-fade></guoce-world-map>
         </section>
-
-        <section name="nation">
-          <guoce-nation cross-fade id="nationScreen"></guoce-nation>
+        <section name='nation'>
+          <guoce-nation cross-fade id='nationScreen'></guoce-nation>
         </section>
-
       </core-animated-pages>
     </core-header-panel>
-
-    <link rel="stylesheet" href="./guoce-app.css">
   </template>
-
-  <script src="./guoce-app.js"></script>
-
+  <script src='./guoce-app.js'></script>
 </polymer-element>
