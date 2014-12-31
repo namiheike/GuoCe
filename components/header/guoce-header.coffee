@@ -1,2 +1,2 @@
 Polymer 'guoce-header',
-  ready: =>
+  ready: ->
