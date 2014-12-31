@@ -1,7 +1,10 @@
-%link{rel: 'import', href: '../../components/base/guoce-base.html'}
-%polymer-element{name: 'guoce-nation', extends: 'guoce-base'}
+%link{rel: 'import', href: '../globals/guoce-globals.html'}
+%link{rel: 'import', href: '../base/guoce-base.html'}
+%polymer-element{name: 'guoce-nation', extends: 'guoce-base', attributes: 'nationId'}
   %template
-    nation
+    %guoce-globals{id: 'globals'}
+    %div
+      nation name: {{nation.name}}
     %link{rel: 'stylesheet', href: 'guoce-nation.css'}
 
   %script{src: 'guoce-nation.js'}

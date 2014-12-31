@@ -15,7 +15,7 @@
 
   <template>
     <guoce-globals id="globals"></guoce-globals>
-    <core-signals on-core-signal-app-switch-current-page="{{ switch_current_page }}"></core-signals>
+    <core-signals on-core-signal-app-switch-current-screen="{{ switch_current_screen }}"></core-signals>
 
     <core-header-panel flex>
       <guoce-header></guoce-header>
@@ -40,7 +40,7 @@
         </section>
 
         <section name="nation">
-          <guoce-nation cross-fade></guoce-nation>
+          <guoce-nation cross-fade id="nationScreen"></guoce-nation>
         </section>
 
       </core-animated-pages>

@@ -5,7 +5,6 @@ Polymer
     @.$.localStorage.value
 
   set_values: (hash) ->
-    console.log 'set values'
     new_values = @get_values()
     for key of hash
       new_values[key] = hash[key]

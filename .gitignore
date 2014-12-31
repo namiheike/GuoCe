@@ -3,3 +3,7 @@ node_modules/
 
 # for bower
 bower_components/
+
+# compiled js
+components/**/*.js
+components/**/*.js.map
