@@ -1,10 +1,16 @@
 %link{rel: 'import', href: '../globals/guoce-globals.html'}
 %link{rel: 'import', href: '../base/guoce-base.html'}
+%link{rel: 'import', href: '../screen-background/guoce-screen-background.html'}
+
 %polymer-element{name: 'guoce-nation', extends: 'guoce-base', attributes: 'nationId'}
   %template
+    %link{rel: 'stylesheet', href: 'guoce-nation.css'}
+
     %guoce-globals{id: 'globals'}
+
+    %guoce-screen-background{type: 'color', color: 'yellow'}
+
     %div
       nation name: {{nation.name}}
-    %link{rel: 'stylesheet', href: 'guoce-nation.css'}
 
   %script{src: 'guoce-nation.js'}
