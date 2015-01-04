@@ -1,4 +1,3 @@
+/* line 1, guoce-init-page.sass */
 :host .menu {
-  overflow: hidden;
-  background: red;
-}
+  background-color: red; }

@@ -3,6 +3,7 @@ GEM
   specs:
     haml (4.0.5)
       tilt
+    sass (3.2.19)
     tilt (1.4.1)
 
 PLATFORMS
@@ -10,3 +11,4 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  sass

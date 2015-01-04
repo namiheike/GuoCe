@@ -7,6 +7,7 @@
 %link{rel: 'import', href: '../globals/guoce-globals.html'}
 
 %link{rel: 'import', href: '../header/guoce-header.html'}
+%link{rel: 'import', href: '../splash/guoce-splash.html'}
 %link{rel: 'import', href: '../init-page/guoce-init-page.html'}
 %link{rel: 'import', href: '../world-map/guoce-world-map.html'}
 %link{rel: 'import', href: '../nation/guoce-nation.html'}
@@ -23,8 +24,7 @@
       %core-animated-pages{ selected: '{{selected}}', transitions: 'cross-fade-all', 'on-core-animated-pages-transition-end' => '{{ transition_end_action }}' }
 
         %section{name: 'splash'}
-          %div(cross-fade)
-            %span splash
+          %guoce-splash(cross-fade)
 
         %section{name: 'init-page'}
           %guoce-init-page(cross-fade)

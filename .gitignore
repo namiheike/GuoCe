@@ -10,3 +10,9 @@ components/**/*.js.map
 
 # compiled html
 components/**/*.html
+
+# compiled css
+components/**/*.css
+
+# sass cache
+.sass-cache/

@@ -5,6 +5,7 @@
       coffee: {
         compile: {
           options: {
+            trace: true,
             bare: false,
             sourceMap: true
           },
@@ -21,9 +22,29 @@
           ]
         }
       },
+      sass: {
+        compile: {
+          options: {
+            trace: true,
+            lineNumbers: true
+          },
+          files: [
+            {
+              expand: true,
+              flatten: false,
+              cwd: '',
+              src: ['**/*.sass'],
+              dest: '',
+              ext: '.css',
+              extDot: 'last'
+            }
+          ]
+        }
+      },
       haml: {
         compile: {
           options: {
+            trace: true,
             bundleExec: true,
             style: 'expanded'
           },
@@ -41,8 +62,9 @@
       }
     });
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-haml2html');
-    return grunt.registerTask('default', ['coffee', 'haml']);
+    return grunt.registerTask('default', ['coffee', 'haml', 'sass']);
   };
 
 }).call(this);

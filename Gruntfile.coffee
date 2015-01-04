@@ -4,6 +4,7 @@ module.exports = (grunt) ->
     coffee:
       compile:
         options:
+          trace: true
           bare: false
           sourceMap: true
         files: [
@@ -13,6 +14,22 @@ module.exports = (grunt) ->
           src: [ '**/*.coffee' ]
           dest: ''
           ext: '.js'
+          extDot: 'last'
+        ]
+    sass:
+      compile:
+        options:
+          trace: true
+          # sourcemap: true
+          # debugInfo: true
+          lineNumbers: true
+        files: [
+          expand: true
+          flatten: false
+          cwd: ''
+          src: [ '**/*.sass' ]
+          dest: ''
+          ext: '.css'
           extDot: 'last'
         ]
     # jade:
@@ -31,6 +48,7 @@ module.exports = (grunt) ->
     haml:
       compile:
         options:
+          trace: true
           bundleExec: true
           style: 'expanded'
         files: [
@@ -41,8 +59,10 @@ module.exports = (grunt) ->
           ext: '.html'
           extDot: 'last'
         ]
+
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-haml2html'
   # grunt.loadNpmTasks 'grunt-contrib-jade'
 
-  grunt.registerTask 'default', ['coffee', 'haml']
+  grunt.registerTask 'default', ['coffee', 'haml', 'sass']
