@@ -1,9 +1,12 @@
 %link{rel: 'import', href: '../base/guoce-base.html'}
+%link{rel: 'import', href: '../screen-background/guoce-screen-background.html'}
 %script{src: '../../bower_components/paper/dist/paper-full.js'}
 %polymer-element{name: 'guoce-world-map', extends: 'guoce-base'}
   %template
+    %link{rel: 'stylesheet', href: 'guoce-world-map.css'}
+
+    %guoce-screen-background{type: 'color', color: 'white'}
     world-map
     %canvas#mainCanvas{resize: true}
-    %link{rel: 'stylesheet', href: 'guoce-world-map.css'}
 
   %script{src: 'guoce-world-map.js', canvas: 'guoce-world-map-canvas' }
