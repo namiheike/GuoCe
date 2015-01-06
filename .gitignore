@@ -8,6 +8,9 @@ bower_components/
 components/**/*.js
 components/**/*.js.map
 
+# compiled json
+resources/**/*.json
+
 # compiled html
 components/**/*.html
 

@@ -9,6 +9,8 @@ Polymer
   open_guocepedia_drawer: (entry_id) ->
     @asyncFire 'core-signal',
       name: 'app-open-guocepedia-drawer'
+      data:
+        entry_id: entry_id
 
   close_guocepedia_drawer: ->
     @asyncFire 'core-signal',

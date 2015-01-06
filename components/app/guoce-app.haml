@@ -12,6 +12,7 @@
 %link{rel: 'import', href: '../init-page/guoce-init-page.html'}
 %link{rel: 'import', href: '../world-map/guoce-world-map.html'}
 %link{rel: 'import', href: '../nation/guoce-nation.html'}
+%link{rel: 'import', href: '../guocepedia/guoce-guocepedia.html'}
 
 %polymer-element{name: 'guoce-app'}(flex vertical layout)
   %template
@@ -26,8 +27,8 @@
 
     %core-signals{ signals_hash }
 
-    %core-drawer-panel#rightDrawerPanel(disableSwipe rightDrawer forceNarrow)
-      %div#guocepediaDrawer(drawer) Drawer
+    %core-drawer-panel#rightDrawerPanel{drawerWidth: '60vw'}(disableSwipe rightDrawer forceNarrow)
+      %guoce-guocepedia#guocepediaDrawer(drawer)
       %core-header-panel(main flex)
         %guoce-header
         %core-animated-pages{ selected: '{{selected}}', transitions: 'cross-fade-all', 'on-core-animated-pages-transition-end' => '{{ transition_end_action }}' }

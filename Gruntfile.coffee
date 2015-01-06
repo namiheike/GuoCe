@@ -11,11 +11,17 @@ module.exports = (grunt) ->
           expand: true
           flatten: false
           cwd: ''
-          src: [ '**/*.coffee' ]
+          src: [ 'components/**/*.coffee' ]
           dest: ''
           ext: '.js'
           extDot: 'last'
         ]
+    cson:
+      compile:
+        expand: true
+        src: [ 'resources/**/*.cson' ]
+        dest: ''
+        ext: '.json'
     sass:
       compile:
         options:
@@ -27,7 +33,7 @@ module.exports = (grunt) ->
           expand: true
           flatten: false
           cwd: ''
-          src: [ '**/*.sass' ]
+          src: [ 'components/**/*.sass' ]
           dest: ''
           ext: '.css'
           extDot: 'last'
@@ -54,15 +60,16 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: ''
-          src: [ '**/*.haml' ]
+          src: [ 'components/**/*.haml' ]
           dest: ''
           ext: '.html'
           extDot: 'last'
         ]
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-cson'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-haml2html'
   # grunt.loadNpmTasks 'grunt-contrib-jade'
 
-  grunt.registerTask 'default', ['coffee', 'haml', 'sass']
+  grunt.registerTask 'default', ['coffee', 'cson', 'haml', 'sass']

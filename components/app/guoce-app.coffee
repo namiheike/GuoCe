@@ -1,24 +1,19 @@
 Polymer 'guoce-app',
   selected: 'splash'
 
-  ready: ->
+  domReady: ->
     @init_app()
 
   init_app: ->
     @init_globals()
 
     # switch to init page
-    # @job 'job_switch_to_init_page', ->
-    #   @selected = 'init-page'
-    # , 1000
+    @job 'job_switch_to_init_page', ->
+      @selected = 'init-page'
+    , 1000
 
   init_globals: ->
-    unless @.$.globals.get_values()?
-      @.$.globals.clear()
-      @.$.globals.set_values
-        nations:
-          nation_a:
-            name: 'nation_a_name'
+    @.$.globals.init()
 
   transition_end_action: ->
     # console.log 'transition end'
@@ -30,4 +25,5 @@ Polymer 'guoce-app',
         @.$.nationScreen.nationId = data.data.nation_id
 
   open_guocepedia_drawer: (e, data, sender) ->
+    @.$.guocepediaDrawer.entryId = 'entry_a'
     @.$.rightDrawerPanel.openDrawer()

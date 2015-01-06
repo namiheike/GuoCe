@@ -6,6 +6,7 @@
     "grunt-contrib-coffee": "^0.12.0",
     "grunt-contrib-jade": "^0.14.0",
     "grunt-contrib-sass": "^0.8.1",
+    "grunt-cson": "^0.10.0",
     "grunt-haml2html": "^0.3.0"
   }
 }

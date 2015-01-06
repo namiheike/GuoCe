@@ -1,7 +1,10 @@
 Polymer
   ready: ->
+  domReady: ->
 
   get_values: ->
+    unless @.$.localStorage.value?
+      @.$.localStorage.load()
     @.$.localStorage.value
 
   set_values: (hash) ->
@@ -14,3 +17,18 @@ Polymer
   clear: ->
     @.$.localStorage.value = {}
     @.$.localStorage.save()
+
+  init: ->
+    unless @get_values()?
+      @clear()
+      @set_values
+        nations:
+          nation_a:
+            name: 'nation_a_name'
+
+      # guocepedia
+      @.$.guocepediaLoader.go()
+
+  guocepedia_loader_complete: ->
+    @set_values
+      guocepedia: @.$.guocepediaLoader.response

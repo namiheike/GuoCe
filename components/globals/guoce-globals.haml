@@ -1,6 +1,8 @@
 %link{rel: 'import', href: '../../bower_components/core-localstorage/core-localstorage.html'}
+%link{rel: 'import', href: '../../bower_components/core-ajax/core-ajax.html'}
 
-%polymer-element{name: 'guoce-globals', attributes: 'get_values set_values'}
+%polymer-element{name: 'guoce-globals'}
   %template
     %core-localstorage#localStorage{name: 'guoce-globals'}
+    %core-ajax#guocepediaLoader{url: '../../resources/data/guocepedia.json', handleAs: 'json', 'on-core-complete' => '{{guocepedia_loader_complete}}'}
   %script{src: './guoce-globals.js'}

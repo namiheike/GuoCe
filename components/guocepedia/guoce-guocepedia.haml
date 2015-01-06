@@ -1,0 +1,17 @@
+%link{rel: 'import', href: '../globals/guoce-globals.html'}
+%link{rel: 'import', href: '../base/guoce-base.html'}
+
+%polymer-element{name: 'guoce-guocepedia', extends: 'guoce-base', attributes: 'entryId'}
+  %template
+    %link{rel: 'stylesheet', href: './guoce-guocepedia.css'}
+
+    %guoce-globals{id: 'globals'}
+
+    %article
+      %header Title
+      %section.content
+        content: {{entry.content}}
+      %footer
+        Footer
+
+  %script{src: './guoce-guocepedia.js'}
